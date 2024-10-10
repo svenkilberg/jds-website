@@ -4,10 +4,10 @@ import "../../models/comment.js";
 
 /**
  *  Creates a comment ui element
- * @param imagePath {string}
- * @param author {string}
- * @param date {string} should this be a dateObject?
- * @param comment {string}
+ *  @param imagePath {string}
+ *  @param author {string}
+ *  @param date {string} should this be a dateObject?
+ *  @param comment {string}
  *  @return a comment element
  */
 function comment(imagePath, author, date, comment) {

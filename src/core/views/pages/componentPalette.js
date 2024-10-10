@@ -1,6 +1,6 @@
 import "../../../css/component-palette.css";
 import button from "../components/buttons.js";
-import comment from "../components/CommentCard.js";
+import comment from "../components/commentCard.js";
 
 function layout() {
     return /*html*/ `
