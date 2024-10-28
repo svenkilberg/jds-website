@@ -12,9 +12,9 @@ import "../../models/comment.js";
  */
 function comment(imagePath, author, date, comment) {
     return /*HTML*/ `
-    <div class="card-comment">
+    <div class="card-comment" aria-hidden="true">
         <div class="author-avatar">
-            <img src="${imagePath}" />
+            <img src="${imagePath}" alt="" />
         </div>
         <div class="author-comment">
             <strong>${author} <span>${date}</span></strong>

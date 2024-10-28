@@ -1,11 +1,14 @@
-import hero from "../components/hero.js";
+import * as Hero from "../components/hero.js";
 import * as stats from "../components/stats.js";
 import about from "../components/about.js";
 
 function layout() {
+
+    stats.init();
+
     return /*html*/ `
     
-    ${ hero() }
+    ${ Hero.layout() }
     
     ${ stats.layout() }
     
@@ -16,6 +19,7 @@ function layout() {
 
 function afterRender() {
     stats.afterRender();
+    Hero.afterRender();
 }
 
 export default { layout, afterRender };

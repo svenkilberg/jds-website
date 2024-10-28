@@ -1,5 +1,6 @@
 import "./css/style.css";
 import app from "./core/app.js";
+import {COLOR} from "./core/config.js";
 
 /**
  * The "main" function of this application.

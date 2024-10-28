@@ -1,0 +1,7 @@
+
+.section-about {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    padding-block: 10rem;
+}

@@ -3,6 +3,8 @@
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);
     min-height: 100vh;
+    overflow-x: hidden;
+    background-color: var(--sky-blue);
 }
 
 #app main {
