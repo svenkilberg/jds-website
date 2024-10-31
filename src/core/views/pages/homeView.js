@@ -1,6 +1,7 @@
 import * as Hero from "../components/hero.js";
 import * as stats from "../components/stats.js";
 import about from "../components/about.js";
+import footer from "../components/footer.js";
 
 function layout() {
 
@@ -13,6 +14,8 @@ function layout() {
     ${ stats.layout() }
     
     ${ about() }
+
+    ${ footer() }
     
     `;
 }

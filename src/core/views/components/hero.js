@@ -22,9 +22,9 @@ let cellsEmitIntervalCounter = 0;
 
 function layout() {
     return /*HTML*/ `
-    <div id="${ HERO_ELEMENT_ID }">
-        <div id="comment-card-container"></div>
+    <div id="${ HERO_ELEMENT_ID }">        
         <section>
+            <div id="comment-card-container"></div>
             <h1>Swedens <span class="yellow">biggest</span> developer community</h1>
             ${ 
                 Button.ankerPrimary
@@ -46,7 +46,7 @@ function afterRender() {
     ctx = canvas.getContext("2d");
     heroCanvasAnimationID = window.requestAnimationFrame(animate);
 
-    renderCommentCards();
+    //renderCommentCards();
 
     canvas.width = heroElement.getBoundingClientRect().width;
     canvas.height = heroElement.getBoundingClientRect().height;
@@ -62,9 +62,9 @@ function afterRender() {
 }
 
 function renderCommentCards() {
-    const commentCard = document.getElementById("comment-card-container");
+    const commentCardContainer = document.getElementById("comment-card-container");
     for (let i = 0; i<3; i++) {
-        commentCard.innerHTML += comment.comment("../../../../public/avatar01.jpg", "Erik", "2024-09-02", "Måste jag dricka kaffe som utvecklare");
+        commentCardContainer.innerHTML += comment.comment("../../../../public/avatar01.jpg", "Erik", "2024-09-02", "Måste jag dricka kaffe som utvecklare");
     }
     positionCommentCards();
 }
@@ -76,7 +76,7 @@ function positionCommentCards() {
         let rngY = Math.floor(Math.random() * 100);
         let rngMinus = Math.random() > 0.5 ? '-' : '';
         setTimeout(() => {
-            card.style.transform = `translate(${rngX}%, ${rngY}%)`;
+            card.style.transform = `translate(100px, 100px)`;
             card.style.opacity = '1';
         }, 100);
     })
