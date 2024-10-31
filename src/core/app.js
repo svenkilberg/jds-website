@@ -62,9 +62,11 @@ function updateView(view) {
 
     document.querySelectorAll('a').forEach(anchor => {
         anchor.addEventListener('click', (ev) => {
-            ev.preventDefault();
-            window.history.pushState({}, "", ev.target.href);
-            handler(ev.target.pathname);
+            if (anchor.host === window.location.host) {
+                ev.preventDefault();
+                window.history.pushState({}, "", ev.target.href);
+                handler(ev.target.pathname);
+            }
         });
     });
 

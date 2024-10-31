@@ -1,25 +1,28 @@
-import button from "../components/buttons.js";
+import * as Hero from "../components/hero.js";
+import * as stats from "../components/stats.js";
+import about from "../components/about.js";
+import footer from "../components/footer.js";
 
 function layout() {
+
+    stats.init();
+
     return /*html*/ `
-    <h1>Hello world!!!</h1>
-    <section>
-        <h2>Comments</h2>
-          <ul id="comments"></ul>
-          
-    </section>
     
-    <section>
-        <p>Demonstrates a button</p>
-        ${button.buttonPrimary("Join the Community", "btn-join-community")}
-    </section>
+    ${ Hero.layout() }
+    
+    ${ stats.layout() }
+    
+    ${ about() }
+
+    ${ footer() }
+    
     `;
 }
 
 function afterRender() {
-    button.afterRender( "btn-join-community", () => {
-        alert("button clicked"); 
-    });
+    stats.afterRender();
+    Hero.afterRender();
 }
 
 export default { layout, afterRender };

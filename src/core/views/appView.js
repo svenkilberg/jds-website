@@ -1,11 +1,8 @@
+import '../../css/layouts/app.css';
+
 export default (pageView) => {
     return `
-    <header>
-        <nav>
-            <a href="/" title="Home">Home</a>
-            <a href="/about" title="About us">About us</a>
-        </nav>
-    </header>
+    <header aria-hidden="true"></header>
     <main>${ pageView }</main>
     <footer></footer>
     `;

@@ -1,5 +1,6 @@
 import "./css/style.css";
-import App from "./core/app.js";
+import app from "./core/app.js";
+import {COLOR} from "./core/config.js";
 
 /**
  * The "main" function of this application.
@@ -13,7 +14,7 @@ window.onload = () => {
         return false;
     }
 
-    App.init(root);
+    app.init(root);
 
-    App.run();
+    app.run();
 };

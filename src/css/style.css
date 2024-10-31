@@ -1,9 +1,31 @@
+@import "./font/Encode_Sans/font.css";
+
 :root {
-    --clr-btn-primary: #5865F2;
+
+    --white: #FFF;
+    --red: #FF6F61;
+    --yellow: #FFD747;
+    --sky-blue: #F1F5F9;
+    --light-green: #DCFCE7;
+    --silver: #F5F7FA;
+    --light-gray: #89939E;
+    --gray: #717171;
+    --dark-gray: #4D4D4D;
+    --black: #263238;
+    --purple: #5865F2;
+
+    --clr-btn-primary: var(--purple);
+    --clr-text-primary: var(--black);
+
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     box-sizing: border-box;
+}
 
+html {
+    color: var(--clr-text-primary);
 }

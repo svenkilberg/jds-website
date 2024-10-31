@@ -14,6 +14,24 @@ function buttonPrimary(text, id) {
     `;
 }
 
+/**
+ *  Creates a button element as an anker tag <a>
+ *  @param text { String }
+ *  @param title {string}
+ *  @param link {string}
+ *  @param ariaLabel {string}
+ *  @return a button element as a anker tag
+ */
+function ankerPrimary(text, title, link, ariaLabel) {
+    return /*HTML*/ `
+    <a href="${link}"
+       aria-label="${ariaLabel}"
+       class="btn anker-primary" 
+       title="${title}">
+        ${text}
+       </a>`
+}
+
 
 /**
  *  Creates a eventlistener on the button thats being created
@@ -33,4 +51,4 @@ function afterRender(id, callbackFunc) {
 
 
 
-export default {buttonPrimary, afterRender};
+export default {buttonPrimary, ankerPrimary, afterRender};
